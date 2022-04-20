@@ -1,8 +1,12 @@
-## About Clonify - iPad OS
+## About Clone-ify - iPad OS
 
 I've always loved the visual design of the iPad operating system (OS), even through all of its development issues and delays. I wanted to recreate the enviroment and this project has evolved significantly as I explored software engineering tools and tech. <br> 
 
 This project simulates the iPad OS, from displaying widgets, to functional applications (eg. safari, messenger, etc.). It is a work in progress and is constantly evolving as new features are planned and added.
+
+<p align="center">
+  <img src="img/Ipad-OS-Clone.png" width="75%" alt="Clone-ify app screenshot"/>
+</p>
 
 
 ## How It's Made
