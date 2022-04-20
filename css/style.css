@@ -1,0 +1,334 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+  font-family: 'helvetica neue', sans-serif;
+}
+body {
+  background-color: #fbfbfd;
+}
+
+h1{
+  color: white;
+  font-size: 3.5em;
+  font-weight: 400;
+  margin: 15px 5px 0 8px;
+
+}
+h2{
+  color: white;
+  font-size: 2em;
+  font-weight: 400;
+  margin: 15px 5px 0 8px;
+
+}
+h4 {
+  color: white;
+  font-size: 1.1em;
+  font-weight: 400;
+  margin: 0 5px 5px 8px;
+}
+h5 {
+  color: white;
+  font-weight: 500;
+  margin: 15px 5px 0px 15px;
+}
+a {
+  text-decoration: none;
+  height: 0px;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Ipad Borders */
+.ipadBorderOuter {
+  border: 3px solid silver;
+  background: black;
+  box-shadow: 0px 0px 17px 3px rgba(0,0,0,0.52);
+  border-radius: 35px;
+  height: 720px;
+  width: 1080px;
+  margin: 20px 10%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 2;
+}
+.ipadBorderInner {
+  border: 2px solid black;
+  background-image: url('iPad-Air-2020-Stock-Wallpapers-1.jpeg');
+  background-size: 100%;
+  border-radius: 25px;
+  height: 640px;
+  width: 1000px;
+
+  display: flex;
+}
+
+/* Ipad Display & content */
+.ipadDisplay {
+  height: 640px;
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  /* Ipad Status Bar - Top display */
+  .statusBar {
+    height: 25px;
+    width: 1000px;
+
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+  }
+  .statusListLeft, .statusListRight {
+    margin-top: 5px;
+    margin: 5px 8px 15px 8px;
+    padding: 0;
+    display: inline;
+  }
+  .statusListLeft {
+    padding-left: 8px;
+  }
+  .statusListRight {
+    padding-right: 8px;
+  }
+  ul li {
+    display: inline;
+    color: white;
+    font-size: 12px;
+    margin-right: 2px;
+
+  }
+
+  /* Ipad display content area - Middle display */
+  .ipadContentArea {
+    height: 490px;
+    width: 1000px;
+    padding-top: 15px;
+
+    display: flex;
+    /* border: 1px solid red; */
+  }
+  .notificationCenterArea {
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+  }
+    .widgetSmall {
+      height: 135px;
+      width: 75%;
+      border-radius: 20px;
+      margin-left: 10%;
+      margin-bottom: 20px;
+
+      /* border: 1px solid red; */
+    }
+    .widgetSmall.widget2 {
+      background: hsla(201, 100%, 85%, 1);
+      background: linear-gradient(315deg, hsla(201, 100%, 85%, 1) 0%, hsla(222, 68%, 59%) 81%);
+      background: -moz-linear-gradient(315deg, hsla(201, 100%, 85%, 1) 0%, hsla(222, 68%, 59%) 81%);
+      background: -webkit-linear-gradient(315deg, hsla(201, 100%, 85%, 1) 0%, hsla(222, 68%, 59%) 81%);
+      filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#b2e4ff", endColorstr="#4F7ADE", GradientType=1 );
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+      #location {
+        height:10px;
+        width: 300px;
+        margin-bottom: 0px;
+      }
+      #temp {
+        height:55px;
+        width: 100px;
+        display: inline-block;
+        margin-top: 0px;
+        margin-left: 15px;
+      }
+      #weather-icon {
+        height:55px;
+        width: 55px;
+        display: inline-block;
+        margin: 0 5px 0 15px;
+        color: white;
+        font-size: 2.25em;
+      }
+
+    .widgetSmall.widget3 {
+      background-color: #383838a9;
+      backdrop-filter: blur(10px);
+    }
+
+  /* Ipad App area - Right */
+  .appArea {
+    width: 60%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    /* border: 1px solid red; */
+  }
+  
+    /* App overlay */
+    .app {
+      height: 500px;
+      width: 275px;
+      z-index: 1;
+      border-radius: 15px;
+      margin-right: 15px;;
+      box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.29);
+
+      /* border: 1px solid red; */
+    }
+      /* Safari App */
+      #safari{
+        background-color: #fbfbfd;
+      }
+        #safariNav {
+          height: 70px;
+          background-color: rgb(83, 83, 83);
+          border-radius: 15px 15px 0 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 0;
+
+        }
+          .dragBar {
+            height: 5px;
+            width: 15%;
+            background-color: rgb(112, 112, 112);
+            border-radius: 10px;
+          }
+          .searchBar {
+            height: 35px;
+            width: 92.5%;
+            background-color: rgb(112, 112, 112);
+            border-radius: 10px;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          #safari iframe {
+            width: 275px;
+            height: 430px; 
+            border-radius: 0 0 15px 15px;
+
+          }
+      /* Message app */
+      #messenger {
+        
+      }
+      /* Music app */
+      #music {
+        
+      }
+      /* Mail app */
+      #mail {
+
+      }
+      /* Settings app */
+      #settings {
+        
+      }
+
+  /* Ipad dock area - Bottom display */
+  .ipadDockArea {
+    height: 125px;
+    width: 1000px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+  }
+  .dock {
+    width: 40%;
+    height: 75px;
+    border-radius: 25px;
+    background-color: #383838a9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12.5px;
+  }
+  .dock .appIcon {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    
+  }
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+/* Hover States */
+.iconHover:hover {
+  box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.29);
+  transform: scale(1.025) translateZ(0);
+}
+  .iconHover {
+    transition: box-shadow 0.2s linear, transform 0.2s linear;
+  }
+.appHover:hover {
+  transform: scale(1.1) translateZ(0);
+  box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.29);
+}
+  .appHover {
+    transition: box-shadow 0.2s linear, transform 0.125s linear;
+  }
+
+/* toggle hidden on off to show apps */
+.hidden {
+  display: none;
+}
+
+
+/* Ipad OS cursor test - Credits to Ralph J. Smit! https://ralphjsmit.com/animated-custom-cursor/*/
+.cursor {
+  width: 12px;
+  height: 12px;
+  position: fixed;      /* Fixed position.. */
+  top: 0;               /* at the top left.. */
+  left: 0;
+  z-index: 999999;      /* above everything else. */
+  pointer-events: none; /* Cant't be clicked. */
+  transition: none;     /* Cursor is always accurate */
+  opacity: 0;        /* Hidden by default */
+}
+
+.cursorIcon {      /* Styling for the visible part */
+  width: 150%;
+  height: 150%;
+  border-radius: 100%;  /* Circle */
+  background-color: rgba(123, 123, 123, 0.7); /* Backup value */
+}
+
+.cursor.cursorVisible { opacity: 1; }
+.cursor.cursorHidden { opacity: 0; }
+
+/* Display the cursors at the correct time */
+* { cursor: none; }
+
+@media (pointer: none), (pointer: coarse) {
+    #cursor, #cursor .cursorIcon { display: none !important; visibility: hidden; opacity: 0; }
+
+    * { cursor: auto !important; }
+}

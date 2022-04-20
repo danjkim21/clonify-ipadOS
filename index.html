@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>iPad Clone</title>
+
+		<!-- external CSS link -->
+		<script src="https://kit.fontawesome.com/a2f02755e4.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<!-- ipad border section -->
+		<main class="ipadBorderOuter">
+			<section class="ipadBorderInner">
+
+				<!-- ipad display section and content-->
+				<section class="ipadDisplay">
+					<!-- Status Bar content -->
+					<div class="statusBar">
+						<ul class="statusListLeft">
+							<li class="timeInsert1">9:43 AM</li>
+							<li class="dateInsert1">Sun Mar 6</li>
+						</ul>
+						<ul class="statusListRight">
+							<li><i class="fa-solid fa-wifi"></i></li>
+							<li><i class="fa-solid fa-headphones"></i></li>
+							<li>79%</li>
+							<li><i class="fa-solid fa-battery-half"></i></li>
+						</ul>
+					</div>
+
+					
+
+					<!-- Main area content -->
+					<div class="ipadContentArea">
+						<!-- Notificaton center to the left with widgets -->
+						<div class="notificationCenterArea">
+							<!-- Widget 1 - Date/time -->
+							<div class="widgetSmall widget1 iconHover">
+								<h1 class="timeInsert2">9:43</h1>
+								<h4 class="dateInsert2">Sunday, March 6</h4>
+							</div>
+							<!-- Widget 2 - Weather -->
+							<div class="widgetSmall widget2 iconHover">
+								<a href="https://www.bbc.com/weather/4140963" target="_blank">
+									<div id="location"><h5>Washington, DC</h5></div>
+								</a>
+								<div ><h2 id="temp" class="inline"></h2></div>
+								<a href="https://www.bbc.com/weather/4140963" target="_blank"><i id="weather-icon" class="inline wi"></i></a>
+							</div>
+							<!-- Widget 3 - TBD -->
+							<div class="widgetSmall widget3 iconHover"></div>
+						</div>
+
+						<div class="appArea">
+							<!-- Apps - Click on app dock will open these apps -->
+							<div id="safari" class="app hidden">
+								<div id="safariNav">
+									<div class="dragBar"></div>
+									<div class="searchBar">https://daniel-jayyoung-</div>
+								</div>
+								<div id="safariBody">
+									<iframe src="https://daniel-jayyoung-kim.netlify.app/" ></iframe>
+								</div>
+							</div>	
+
+							<div id="messenger" class="app hidden">
+							</div>	
+
+							<div id="music" class="app hidden">
+							</div>	
+
+							<div id="mail" class="app hidden">
+							</div>
+								
+							<div id="settings" class="app hidden">
+							</div>	
+
+						</div>
+					</div>
+
+					<!-- Dock content -->
+					<div class="ipadDockArea">
+						<div class="dock">
+							<img class="appIcon appHover appSafari" src="img/icon-pack-basic/safari.png" alt="">
+							<img class="appIcon appHover appMessenger" src="img/icon-pack-basic/facebook-messenger.png" alt="">
+							<img class="appIcon appHover appMusic" src="img/icon-pack-basic/music-sign.png" alt="">
+							<img class="appIcon appHover appMail" src="img/icon-pack-basic/gmail.png" alt="">
+							<img class="appIcon appHover appSettings" src="img/icon-pack-basic/setting-cog.png" alt="">
+						</div>
+
+					</div>
+
+				</section>
+			</section>
+		</main>
+
+		
+		<!-- Ipad OS cursor test - Credits to Ralph J. Smit! https://ralphjsmit.com/animated-custom-cursor/ -->
+		<div id="cursor" class="cursor">
+			<div class="cursorIcon"></div>
+		</div>
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
