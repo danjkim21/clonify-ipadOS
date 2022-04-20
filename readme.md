@@ -5,7 +5,7 @@ I've always loved the visual design of the iPad operating system (OS), even thro
 This project simulates the iPad OS, from displaying widgets, to functional applications (eg. safari, messenger, etc.). It is a work in progress and is constantly evolving as new features are planned and added.
 
 
-### How It's Made
+## How It's Made
 
 **Tech used:** HTML, CSS, JavaScript. <br>
 
