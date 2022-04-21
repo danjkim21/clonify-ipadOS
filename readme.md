@@ -21,11 +21,11 @@ I found an article from blog by [Ralph J. Smit](https://ralphjsmit.com/animated-
 
 ## Lessons Learned:
 
-I've learned that vanilla CSS is extremely powerful, but also can get quite complicated if you are not cleaning up your code often. I'll need to go back and refactor and make sense of it all. I also learned how important leaving comments are.
+I've learned that vanilla CSS is extremely powerful, but also can get quite complicated if you are not cleaning up your code often. I'll need to go back and refactor and make sense of it all. I also learned how important leaving comments are. 
 
 ## Roadmap
 
-- [ ] Fully up to date README
+- [x] Fully draft README
 - [ ] Refactor, refactor, refactor, & refactor
 - [ ] Rebuild JS weather API and the mouse effect
 - [ ] Build out each app on the dock
