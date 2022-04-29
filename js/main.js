@@ -69,6 +69,12 @@ window.onload = () => {
     xhr.send();
 }
 
+// ---- Set battery level in status bar ----
+navigator.getBattery().then(function(battery) {
+    // Battery level is between 0 and 1, so we multiply it by 100 to get in percents
+    console.log("Battery level: " + battery.level * 100 + "%");
+    document.querySelector(".batteryLevel").innerHTML = `${battery.level * 100}%`
+});
 
 // ---- Ipad OS cursor test - Credits to Ralph J. Smit! https://ralphjsmit.com/animated-custom-cursor/ ----
 var cursor =  document.getElementById("cursor"); //Getting the cursor
