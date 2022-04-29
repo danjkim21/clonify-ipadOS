@@ -76,6 +76,20 @@ navigator.getBattery().then(function(battery) {
     document.querySelector(".batteryLevel").innerHTML = `${battery.level * 100}%`
 });
 
+// ---- Messenger app: Send message via input area ----
+let input = document.querySelector('.messageBox')
+input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        let msgValue = document.createElement('p');
+        msgValue.innerHTML = document.querySelector('.messageBox').value;
+
+        // alert(msgValue);
+        msgValue.setAttribute('class', 'userTextMsg');
+        document.querySelector('#messageBody').appendChild(msgValue);
+        
+    }
+});
+
 // ---- Ipad OS cursor test - Credits to Ralph J. Smit! https://ralphjsmit.com/animated-custom-cursor/ ----
 var cursor =  document.getElementById("cursor"); //Getting the cursor
 var body =  document.querySelector("body"); //Get the body element

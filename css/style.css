@@ -232,8 +232,77 @@ a {
           }
       /* Message app */
       #messenger {
-        
+        background-color: rgb(255, 255, 255);
       }
+        #messengerNav {
+          height: 80px;
+          padding: 0 15px 0 15px;
+          background-color: rgb(245, 245, 245);
+          border-bottom: 1px solid rgb(228, 228, 228);
+          border-radius: 15px 15px 0 0;
+          display: flex;
+          justify-content:space-between;
+          align-items: center;
+        }
+          #messengerNav i {
+            color: rgb(0, 122, 255);
+          }
+          .messageUser {
+            text-align: center;
+          }
+          .messageUser span {
+            font-size: 12px;
+          }
+          .headshot {
+            width: 40px;
+            border-radius: 50%;
+          }
+        #messageBody {
+          /* border: 1px solid red; */
+          height: 380px; 
+          text-align: right;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+        }
+          .userTextMsg {
+            background-color: rgb(0, 122, 255);
+            color: white;
+            text-align: right;
+            min-height: 25px;
+            min-width: 60px;
+            /* float: right; */
+            padding: 5px 10px 5px 10px;
+            margin: 8px 0 6px 0;
+            border-radius: 12px;
+          }
+
+        #textbox {
+          height: 35px;  
+        }
+          #textbox {
+            padding: 0 10px 0 10px;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+          }
+          #textbox i {
+            color: rgb(112, 112, 112);
+            font-size: 20px;
+          }
+          #textbox i+i {
+            color: rgb(0, 122, 255);
+          }
+          #textbox input {
+            font-size: 14px;
+            border: 1px solid rgb(165, 165, 165);
+            border-radius: 12.5px;
+            height: 25px;
+            width: 190px;
+            padding-left: 7.5px;
+          }
+
       /* Music app */
       #music {
         

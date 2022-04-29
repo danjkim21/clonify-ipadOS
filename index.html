@@ -15,7 +15,7 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<!-- ipad border section -->
+		<!-- ipad container section -->
 		<main class="ipadBorderOuter">
 			<section class="ipadBorderInner">
 
@@ -35,11 +35,10 @@
 						</ul>
 					</div>
 
-					
-
-					<!-- Main area content -->
+					<!-- ipad Main Display area content -->
 					<div class="ipadContentArea">
-						<!-- Notificaton center to the left with widgets -->
+
+						<!-- Notificaton center (widget space) to the left with widgets -->
 						<div class="notificationCenterArea">
 							<!-- Widget 1 - Date/time -->
 							<div class="widgetSmall widget1 iconHover">
@@ -58,8 +57,11 @@
 							<div class="widgetSmall widget3 iconHover"></div>
 						</div>
 
+						<!-- Space for extra apps and app open areas -->
 						<div class="appArea">
+
 							<!-- Apps - Click on app dock will open these apps -->
+							<!-- Safari App content -->
 							<div id="safari" class="app hidden">
 								<div id="safariNav">
 									<div class="dragBar"></div>
@@ -70,15 +72,38 @@
 								</div>
 							</div>	
 
+							<!-- Messenger App content -->
 							<div id="messenger" class="app hidden">
+								<div id="messengerNav">
+									<i class="fa-solid fa-angle-left"></i>
+									<div class="messageUser">
+										<img class="headshot" src="https://xsgames.co/randomusers/avatar.php?g=male" alt="headshot">
+										<div class="messageUserName">
+											<span>Daniel Kim</span>
+											<!-- <i class="fa-solid fa-angle-right"> -->
+										</div>
+									</div>
+									<i class="fa-solid fa-video"></i>
+								</div>
+								<div id="messageBody">
+								</div>
+								<div id="textbox">
+									<i class="fa-solid fa-camera"></i>
+									<i class="fa-brands fa-app-store"></i>
+									<input class="messageBox" type="text" value="" placeholder="imessage">
+								</div>
+								
 							</div>	
 
+							<!-- Apple Music App content -->
 							<div id="music" class="app hidden">
 							</div>	
 
+							<!-- Mail App content -->
 							<div id="mail" class="app hidden">
 							</div>
-								
+							
+							<!-- Settings App content -->
 							<div id="settings" class="app hidden">
 							</div>	
 
