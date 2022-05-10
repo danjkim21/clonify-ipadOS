@@ -3,7 +3,7 @@
 /*******************************************/
 
 /* Box Model Hack */
-*{
+* {
   box-sizing: border-box;
   font-family: 'helvetica neue', sans-serif;
 }
@@ -11,19 +11,17 @@ body {
   background-color: #fbfbfd;
 }
 
-h1{
+h1 {
   color: white;
   font-size: 3.5em;
   font-weight: 400;
   margin: 15px 5px 0 8px;
-
 }
-h2{
+h2 {
   color: white;
   font-size: 2em;
   font-weight: 400;
   margin: 15px 5px 0 8px;
-
 }
 h4 {
   color: white;
@@ -41,7 +39,6 @@ a {
   height: 0px;
 }
 
-
 /******************************************
 /* LAYOUT
 /*******************************************/
@@ -50,7 +47,7 @@ a {
 .ipadBorderOuter {
   border: 3px solid silver;
   background: black;
-  box-shadow: 0px 0px 17px 3px rgba(0,0,0,0.52);
+  box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.52);
   border-radius: 35px;
   height: 720px;
   width: 1080px;
@@ -80,324 +77,468 @@ a {
   flex-wrap: wrap;
 }
 
-  /* Ipad Status Bar - Top display */
-  .statusBar {
-    height: 25px;
-    width: 1000px;
+/* Ipad Status Bar - Top display */
+.statusBar {
+  height: 25px;
+  width: 1000px;
 
-    display: flex;
-    justify-content: space-between;
-    /* border: 1px solid red; */
-  }
-  .statusListLeft, .statusListRight {
-    margin-top: 5px;
-    margin: 5px 8px 15px 8px;
-    padding: 0;
-    display: inline;
-  }
-  .statusListLeft {
-    padding-left: 8px;
-  }
-  .statusListRight {
-    padding-right: 8px;
-  }
-  ul li {
-    display: inline;
-    color: white;
-    font-size: 12px;
-    margin-right: 2px;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+.statusListLeft,
+.statusListRight {
+  margin-top: 5px;
+  margin: 5px 8px 15px 8px;
+  padding: 0;
+  display: inline;
+}
+.statusListLeft {
+  padding-left: 8px;
+}
+.statusListRight {
+  padding-right: 8px;
+}
+ul li {
+  display: inline;
+  color: white;
+  font-size: 12px;
+  margin-right: 2px;
+}
 
-  }
+/* Ipad display content area - Middle display */
+.ipadContentArea {
+  height: 490px;
+  width: 1000px;
+  padding-top: 15px;
 
-  /* Ipad display content area - Middle display */
-  .ipadContentArea {
-    height: 490px;
-    width: 1000px;
-    padding-top: 15px;
+  display: flex;
+  /* border: 1px solid red; */
+}
+.notificationCenterArea {
+  width: 40%;
 
-    display: flex;
-    /* border: 1px solid red; */
-  }
-  .notificationCenterArea {
-    width: 40%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* border: 1px solid red; */
+}
+.widgetSmall {
+  height: 135px;
+  width: 75%;
+  border-radius: 20px;
+  margin-left: 10%;
+  margin-bottom: 20px;
 
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /* border: 1px solid red; */
-  }
-    .widgetSmall {
-      height: 135px;
-      width: 75%;
-      border-radius: 20px;
-      margin-left: 10%;
-      margin-bottom: 20px;
+  /* border: 1px solid red; */
+}
+.widgetSmall.widget2 {
+  background: hsla(201, 100%, 85%, 1);
+  background: linear-gradient(
+    315deg,
+    hsla(201, 100%, 85%, 1) 0%,
+    hsla(222, 68%, 59%) 81%
+  );
+  background: -moz-linear-gradient(
+    315deg,
+    hsla(201, 100%, 85%, 1) 0%,
+    hsla(222, 68%, 59%) 81%
+  );
+  background: -webkit-linear-gradient(
+    315deg,
+    hsla(201, 100%, 85%, 1) 0%,
+    hsla(222, 68%, 59%) 81%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#b2e4ff", endColorstr="#4F7ADE", GradientType=1 );
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#location {
+  height: 10px;
+  width: 300px;
+  margin-bottom: 0px;
+}
+#temp {
+  height: 55px;
+  width: 100px;
+  display: inline-block;
+  margin-top: 0px;
+  margin-left: 15px;
+}
+#weather-icon {
+  height: 55px;
+  width: 55px;
+  display: inline-block;
+  margin: 0 5px 0 15px;
+  color: white;
+  font-size: 2.25em;
+}
 
-      /* border: 1px solid red; */
-    }
-    .widgetSmall.widget2 {
-      background: hsla(201, 100%, 85%, 1);
-      background: linear-gradient(315deg, hsla(201, 100%, 85%, 1) 0%, hsla(222, 68%, 59%) 81%);
-      background: -moz-linear-gradient(315deg, hsla(201, 100%, 85%, 1) 0%, hsla(222, 68%, 59%) 81%);
-      background: -webkit-linear-gradient(315deg, hsla(201, 100%, 85%, 1) 0%, hsla(222, 68%, 59%) 81%);
-      filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#b2e4ff", endColorstr="#4F7ADE", GradientType=1 );
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-      #location {
-        height:10px;
-        width: 300px;
-        margin-bottom: 0px;
-      }
-      #temp {
-        height:55px;
-        width: 100px;
-        display: inline-block;
-        margin-top: 0px;
-        margin-left: 15px;
-      }
-      #weather-icon {
-        height:55px;
-        width: 55px;
-        display: inline-block;
-        margin: 0 5px 0 15px;
-        color: white;
-        font-size: 2.25em;
-      }
+.widgetSmall.widget3 {
+  background-color: #383838a9;
+  backdrop-filter: blur(10px);
+}
 
-    .widgetSmall.widget3 {
-      background-color: #383838a9;
-      backdrop-filter: blur(10px);
-    }
+/* Ipad App area - Right */
+.appArea {
+  width: 60%;
 
-  /* Ipad App area - Right */
-  .appArea {
-    width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  /* border: 1px solid red; */
+}
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
-    /* border: 1px solid red; */
-  }
-  
-    /* App overlay */
-    .app {
-      height: 500px;
-      width: 275px;
-      z-index: 1;
-      border-radius: 15px;
-      margin-right: 15px;;
-      box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.29);
+/* App overlay */
+.app {
+  height: 500px;
+  width: 275px;
+  z-index: 1;
+  border-radius: 15px;
+  margin-right: 15px;
+  box-shadow: 0px 0px 18px 2px rgba(0, 0, 0, 0.29);
 
-      /* border: 1px solid red; */
-    }
-      /* Safari App */
-      #safari{
-        background-color: #fbfbfd;
-      }
-        #safariNav {
-          height: 70px;
-          background-color: rgb(83, 83, 83);
-          border-radius: 15px 15px 0 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-wrap: wrap;
-          gap: 0;
+  /* border: 1px solid red; */
+}
+/* Safari App */
+#safari {
+  background-color: #fbfbfd;
+}
+#safariNav {
+  height: 70px;
+  background-color: rgb(83, 83, 83);
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+.dragBar {
+  height: 4px;
+  width: 30px;
+  background-color: rgb(112, 112, 112);
+  border-radius: 10px;
+}
+.searchBar {
+  height: 35px;
+  width: 92.5%;
+  background-color: rgb(112, 112, 112);
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#safari iframe {
+  width: 275px;
+  height: 430px;
+  border-radius: 0 0 15px 15px;
+}
+/* Message app */
+#messenger {
+  background-color: rgb(255, 255, 255);
+}
+#messengerNav {
+  height: 80px;
+  padding: 0 15px 0 15px;
+  background-color: rgb(245, 245, 245);
+  border-bottom: 1px solid rgb(228, 228, 228);
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#messengerNav i {
+  color: rgb(0, 122, 255);
+}
+.messageUser {
+  text-align: center;
+}
+.messageUser span {
+  font-size: 12px;
+}
+.headshot {
+  width: 40px;
+  border-radius: 50%;
+}
+#messageBody {
+  /* border: 1px solid red; */
+  height: 380px;
+  text-align: right;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.userTextMsg {
+  background-color: rgb(0, 122, 255);
+  color: white;
+  text-align: right;
+  min-height: 25px;
+  min-width: 60px;
+  /* float: right; */
+  padding: 5px 10px 5px 10px;
+  margin: 8px 0 6px 0;
+  border-radius: 12px;
+}
 
-        }
-          .dragBar {
-            height: 5px;
-            width: 15%;
-            background-color: rgb(112, 112, 112);
-            border-radius: 10px;
-          }
-          .searchBar {
-            height: 35px;
-            width: 92.5%;
-            background-color: rgb(112, 112, 112);
-            border-radius: 10px;
-            color:white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          #safari iframe {
-            width: 275px;
-            height: 430px; 
-            border-radius: 0 0 15px 15px;
+#textbox {
+  height: 35px;
+}
+#textbox {
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#textbox i {
+  color: rgb(112, 112, 112);
+  font-size: 20px;
+}
+#textbox i + i {
+  color: rgb(0, 122, 255);
+}
+#textbox input {
+  font-size: 14px;
+  border: 1px solid rgb(165, 165, 165);
+  border-radius: 12.5px;
+  height: 25px;
+  width: 190px;
+  padding-left: 7.5px;
+}
 
-          }
-      /* Message app */
-      #messenger {
-        background-color: rgb(255, 255, 255);
-      }
-        #messengerNav {
-          height: 80px;
-          padding: 0 15px 0 15px;
-          background-color: rgb(245, 245, 245);
-          border-bottom: 1px solid rgb(228, 228, 228);
-          border-radius: 15px 15px 0 0;
-          display: flex;
-          justify-content:space-between;
-          align-items: center;
-        }
-          #messengerNav i {
-            color: rgb(0, 122, 255);
-          }
-          .messageUser {
-            text-align: center;
-          }
-          .messageUser span {
-            font-size: 12px;
-          }
-          .headshot {
-            width: 40px;
-            border-radius: 50%;
-          }
-        #messageBody {
-          /* border: 1px solid red; */
-          height: 380px; 
-          text-align: right;
-          padding: 10px;
-          display: flex;
-          flex-direction: column;
-          flex-wrap: wrap;
-        }
-          .userTextMsg {
-            background-color: rgb(0, 122, 255);
-            color: white;
-            text-align: right;
-            min-height: 25px;
-            min-width: 60px;
-            /* float: right; */
-            padding: 5px 10px 5px 10px;
-            margin: 8px 0 6px 0;
-            border-radius: 12px;
-          }
+/* Music app */
+#music {
+  backdrop-filter: blur(45px) brightness(0.9);
+}
+#musicNav {
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+#albumCoverContainer {
+  padding-top: 10px;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.albumCoverImg {
+  width: 210px;
+  height: 210px;
+  box-shadow: 0px 4px 11px 5px rgba(0,0,0,0.34);
 
-        #textbox {
-          height: 35px;  
-        }
-          #textbox {
-            padding: 0 10px 0 10px;
-            display: flex;
-            justify-content:space-between;
-            align-items: center;
-          }
-          #textbox i {
-            color: rgb(112, 112, 112);
-            font-size: 20px;
-          }
-          #textbox i+i {
-            color: rgb(0, 122, 255);
-          }
-          #textbox input {
-            font-size: 14px;
-            border: 1px solid rgb(165, 165, 165);
-            border-radius: 12.5px;
-            height: 25px;
-            width: 190px;
-            padding-left: 7.5px;
-          }
+}
+#songInfoContainer{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.songTitle{
+  margin: 5px 0 2.5px 0;
+  font-weight: 700;
+  color: rgb(247, 247, 247);
+}
+.songAuthor{
+  margin: 0;
+  color: rgba(231, 231, 231, 0.85);
+}
+#moreInfoBtn {
+  color: rgb(247, 247, 247);
+  width: 20px;
+  height: 20px;
+  padding: 2.5px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+}
+#songLength {
+  padding: 5px 0 5px 0;
+  /* border: 1px solid red; */
+}
+.songLengthSlider{
+  -webkit-appearance: none;  
+  appearance: none;
+  width: 100%; 
+  height: 4px; 
+  border-radius: 4px;  
+  background: #d3d3d3; 
+  outline: none; 
+  opacity: 0.8; 
+  transition: all .2s;
+}
+.songLengthSlider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+  /* transform: scale(1.01, 1.2); */
+  height: 7.5px;
+}
+.songLengthSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12.5px;
+  height: 12.5px;
+  border-radius: 50%; 
+  background: rgb(247, 247, 247);
+  cursor: pointer;
+}
+#songlengthIndicators{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+#currentTime, #remainingTime {
+  font-size: 12px;
+  padding-top: 2px;
+  color: rgba(231, 231, 231, 0.85);
+}
+#songController {
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;  
+  padding: 22.5px 0 22.5px 0;
+  /* border: 1px solid red; */
+}
+.songControllerButtons {
+  font-size: 2.1rem;
+  color: rgb(247, 247, 247);
+}
+#volumeLength {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 5px 0 5px 0;
+  /* border: 1px solid red; */
+}
+#volSlider {
+  width: 80%;
+}
+.volumeIndicator{
+  font-size: 0.6rem;
+  color: rgb(247, 247, 247);
+}
+#extraBtnsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 0 5px 0;
+}
+.extraBtn {
+  font-size: 0.9rem;
+  color: rgba(231, 231, 231, 0.85);
+}
 
-      /* Music app */
-      #music {
-        
-      }
-      /* Mail app */
-      #mail {
+#songInfoContainer, #songLength, #volumeLength, #extraBtnsContainer {
+  padding-left: 17.5px;
+  padding-right: 17.5px;
+}
 
-      }
-      /* Settings app */
-      #settings {
-        
-      }
+/* Mail app */
+#mail {
+}
 
-  /* Ipad dock area - Bottom display */
-  .ipadDockArea {
-    height: 125px;
-    width: 1000px;
+/* Settings app */
+#settings {
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* border: 1px solid red; */
-  }
-  .dock {
-    width: 40%;
-    height: 75px;
-    border-radius: 25px;
-    background-color: #383838a9;
+/* Ipad dock area - Bottom display */
+.ipadDockArea {
+  height: 125px;
+  width: 1000px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12.5px;
-  }
-  .dock .appIcon {
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-    
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+.dock {
+  width: 40%;
+  height: 75px;
+  border-radius: 25px;
+  background-color: #383838a9;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12.5px;
+}
+.dock .appIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 /* Hover States */
 .iconHover:hover {
-  box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.29);
+  box-shadow: 0px 0px 18px 2px rgba(0, 0, 0, 0.29);
   transform: scale(1.025) translateZ(0);
 }
-  .iconHover {
-    transition: box-shadow 0.2s linear, transform 0.2s linear;
-  }
+.iconHover {
+  transition: box-shadow 0.2s linear, transform 0.2s linear;
+}
 .appHover:hover {
   transform: scale(1.1) translateZ(0);
-  box-shadow: 0px 0px 18px 2px rgba(0,0,0,0.29);
+  box-shadow: 0px 0px 18px 2px rgba(0, 0, 0, 0.29);
 }
-  .appHover {
-    transition: box-shadow 0.2s linear, transform 0.125s linear;
-  }
+.appHover {
+  transition: box-shadow 0.2s linear, transform 0.125s linear;
+}
 
 /* toggle hidden on off to show apps */
 .hidden {
   display: none;
 }
 
-
 /* Ipad OS cursor test - Credits to Ralph J. Smit! https://ralphjsmit.com/animated-custom-cursor/*/
 .cursor {
   width: 12px;
   height: 12px;
-  position: fixed;      /* Fixed position.. */
-  top: 0;               /* at the top left.. */
+  position: fixed; /* Fixed position.. */
+  top: 0; /* at the top left.. */
   left: 0;
-  z-index: 999999;      /* above everything else. */
+  z-index: 999999; /* above everything else. */
   pointer-events: none; /* Cant't be clicked. */
-  transition: none;     /* Cursor is always accurate */
-  opacity: 0;        /* Hidden by default */
+  transition: none; /* Cursor is always accurate */
+  opacity: 0; /* Hidden by default */
 }
 
-.cursorIcon {      /* Styling for the visible part */
+.cursorIcon {
+  /* Styling for the visible part */
   width: 150%;
   height: 150%;
-  border-radius: 100%;  /* Circle */
+  border-radius: 100%; /* Circle */
   background-color: rgba(123, 123, 123, 0.7); /* Backup value */
 }
 
-.cursor.cursorVisible { opacity: 1; }
-.cursor.cursorHidden { opacity: 0; }
+.cursor.cursorVisible {
+  opacity: 1;
+}
+.cursor.cursorHidden {
+  opacity: 0;
+}
 
 /* Display the cursors at the correct time */
-* { cursor: none; }
+* {
+  cursor: none;
+}
 
 @media (pointer: none), (pointer: coarse) {
-    #cursor, #cursor .cursorIcon { display: none !important; visibility: hidden; opacity: 0; }
+  #cursor,
+  #cursor .cursorIcon {
+    display: none !important;
+    visibility: hidden;
+    opacity: 0;
+  }
 
-    * { cursor: auto !important; }
+  * {
+    cursor: auto !important;
+  }
 }

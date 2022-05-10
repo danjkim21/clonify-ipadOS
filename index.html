@@ -97,6 +97,42 @@
 
 							<!-- Apple Music App content -->
 							<div id="music" class="app hidden">
+								<div id="backgroundImgBlur"></div>
+								<div id="musicNav">
+									<div class="dragBar"></div>
+								</div>
+								<div id="albumCoverContainer">
+									<img class="albumCoverImg" src="https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="song album cover image">
+								</div>
+								<div id="songInfoContainer">
+									<div id="songInfo">
+										<p class="songTitle">The Dayman</p>
+										<p class="songAuthor">Charlie Day</p>
+									</div>
+									<i id="moreInfoBtn" class="fa-solid fa-ellipsis"></i>
+								</div>
+								<div id="songLength">
+									<input type="range" min="1" max="100" value="0" class="songLengthSlider">
+									<div id="songlengthIndicators">
+										<span id="currentTime">3:10</span>
+										<span id="remainingTime">-1:12</span>
+									</div>
+								</div>
+								<div id="songController">
+									<i class="fa-solid fa-backward songControllerButtons"></i>
+									<i class="fa-solid fa-pause songControllerButtons"></i>
+									<i class="fa-solid fa-forward songControllerButtons"></i>
+								</div>
+								<div id="volumeLength">
+									<i class="fa-solid fa-volume-off volumeIndicator"></i>
+									<input type="range" min="1" max="100" value="50" id="volSlider" class="songLengthSlider">
+									<i class="fa-solid fa-volume-high volumeIndicator"></i>
+								</div>
+								<div id="extraBtnsContainer">
+									<i class="fa-solid fa-share-from-square extraBtn"></i>
+									<i class="fa-brands fa-slideshare extraBtn"></i>
+									<i class="fa-solid fa-list extraBtn"></i>
+								</div>
 							</div>	
 
 							<!-- Mail App content -->
