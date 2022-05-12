@@ -271,7 +271,7 @@ ul li {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  overflow: auto;
 }
 .userTextMsg {
   background-color: rgb(0, 122, 255);
@@ -332,21 +332,20 @@ ul li {
 .albumCoverImg {
   width: 210px;
   height: 210px;
-  box-shadow: 0px 4px 11px 5px rgba(0,0,0,0.34);
-
+  box-shadow: 0px 4px 11px 5px rgba(0, 0, 0, 0.34);
 }
-#songInfoContainer{
+#songInfoContainer {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   /* border: 1px solid red; */
 }
-.songTitle{
+.songTitle {
   margin: 5px 0 2.5px 0;
   font-weight: 700;
   color: rgb(247, 247, 247);
 }
-.songAuthor{
+.songAuthor {
   margin: 0;
   color: rgba(231, 231, 231, 0.85);
 }
@@ -362,16 +361,16 @@ ul li {
   padding: 5px 0 5px 0;
   /* border: 1px solid red; */
 }
-.songLengthSlider{
-  -webkit-appearance: none;  
+.songLengthSlider {
+  -webkit-appearance: none;
   appearance: none;
-  width: 100%; 
-  height: 4px; 
-  border-radius: 4px;  
-  background: #d3d3d3; 
-  outline: none; 
-  opacity: 0.8; 
-  transition: all .2s;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.8;
+  transition: all 0.2s;
 }
 .songLengthSlider:hover {
   opacity: 1; /* Fully shown on mouse-over */
@@ -383,24 +382,25 @@ ul li {
   appearance: none;
   width: 12.5px;
   height: 12.5px;
-  border-radius: 50%; 
+  border-radius: 50%;
   background: rgb(247, 247, 247);
   cursor: pointer;
 }
-#songlengthIndicators{
+#songlengthIndicators {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
-#currentTime, #remainingTime {
+#currentTime,
+#remainingTime {
   font-size: 12px;
   padding-top: 2px;
   color: rgba(231, 231, 231, 0.85);
 }
 #songController {
   display: flex;
-  justify-content:space-evenly;
-  align-items: center;  
+  justify-content: space-evenly;
+  align-items: center;
   padding: 22.5px 0 22.5px 0;
   /* border: 1px solid red; */
 }
@@ -410,7 +410,7 @@ ul li {
 }
 #volumeLength {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   padding: 5px 0 5px 0;
   /* border: 1px solid red; */
@@ -418,7 +418,7 @@ ul li {
 #volSlider {
   width: 80%;
 }
-.volumeIndicator{
+.volumeIndicator {
   font-size: 0.6rem;
   color: rgb(247, 247, 247);
 }
@@ -433,17 +433,74 @@ ul li {
   color: rgba(231, 231, 231, 0.85);
 }
 
-#songInfoContainer, #songLength, #volumeLength, #extraBtnsContainer {
+#songInfoContainer,
+#songLength,
+#volumeLength,
+#extraBtnsContainer {
   padding-left: 17.5px;
   padding-right: 17.5px;
 }
 
 /* Mail app */
 #mail {
+  background-color: rgb(255, 255, 255);
+  position: relative;
+}
+.mailNav {
+  height: 50px;
+  padding: 0 12.5px 0 12.5px;
+  background-color: rgb(245, 245, 245);
+  border-bottom: 1px solid rgb(228, 228, 228);
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mailNavBtns {
+  font-size: 14px;
+}
+.blueBtn {
+  color: rgb(0, 122, 255);
+}
+#mailBoxContainer {
+  height: 400px;
+  overflow-y: auto;
+}
+.mailNav.bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid rgb(228, 228, 228);
+  border-radius: 0 0 15px 15px;
+}
+#filterInfo,
+#filterSelection {
+  margin: 0;
+  font-size: 10px;
+}
+#filterInfo {
+  font-weight: 600;
+}
+#filterSelection {
+  color: rgb(0, 122, 255);
 }
 
 /* Settings app */
 #settings {
+  background-color: rgb(239, 239, 244);
+}
+#settingsNav {
+  height: 50px;
+  padding: 0 12.5px 0 12.5px;
+  background-color: rgb(245, 245, 245);
+  border-bottom: 1px solid rgb(228, 228, 228);
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bold {
+  font-weight: 500;
 }
 
 /* Ipad dock area - Bottom display */
@@ -471,6 +528,24 @@ ul li {
   width: 60px;
   height: 60px;
   border-radius: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items:flex-start;
+}
+footer a {
+  color: black;
+
+  transition: all 0.15s linear;
+}
+footer a:hover {
+  color: rgba(236, 116, 17, 0.87);
+  text-decoration: underline;
+}
+.divider {
+  margin: 0 1rem 0 1rem;
 }
 
 /******************************************

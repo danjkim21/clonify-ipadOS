@@ -169,8 +169,8 @@ function openMail() {
 }
 
 // Open Settings app
-document.querySelector('.appSettings').addEventListener('click', openMail);
-function openMail() {
+document.querySelector('.appSettings').addEventListener('click', openSettings);
+function openSettings() {
     document.querySelector('#settings').classList.toggle('hidden');
     document.querySelector('#safari').classList.add('hidden');
     document.querySelector('#music').classList.add('hidden');
