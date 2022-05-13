@@ -21,14 +21,15 @@ I found an article from blog by [Ralph J. Smit](https://ralphjsmit.com/animated-
 
 ## Lessons Learned:
 
-I've learned that vanilla CSS is extremely powerful, but also can get quite complicated if you are not cleaning up your code often. I'll need to go back and refactor and make sense of it all. I also learned how important leaving comments are. 
+I've learned that vanilla CSS is extremely powerful, but also can get quite complicated if you are not cleaning up your code often. I'll need to go back and refactor and make sense of it all. I also learned how important leaving comments are. Lastly, I've learned that ensuring cross browser compatibility is essential. NOTHING WORKS ON SAFARI.
 
 ## Roadmap
 
 - [x] Fully draft README
-- [ ] Refactor, refactor, refactor, & refactor
-- [ ] Rebuild JS weather API and the mouse effect
 - [ ] Build out each app on the dock
+- [ ] Refactor, refactor, refactor, & refactor (make sure animations and interactions work in Safari)
+- [ ] Integrate song API into music app
+- [ ] Rebuild JS weather API and the mouse effect
 - [ ] Add in animations for each app open and close
 - [ ] Create password screen that opens on swipe up
 
