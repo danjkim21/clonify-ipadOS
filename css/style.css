@@ -57,7 +57,78 @@ a {
   align-items: center;
   justify-content: center;
   order: 2;
+  flex-wrap: wrap;
 }
+.closed {
+  height: 0px !important;
+  background-image: black;
+}
+/* Login Display area */
+.ipadLoginDisplay {
+  height: 640px;
+  width: 1000px;
+  background-image: url('iPad-Air-2020-Stock-Wallpapers-1.jpeg');
+  background-size: 100%;
+  border-radius: 25px;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  overflow: hidden;
+  transition-property: all;
+  transition-duration: 250ms;
+  transition-timing-function: ease-out;
+}
+.loginDisplayContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+.dateTimeHead {
+  padding: 0;
+}
+.ipadLoginDisplay i {
+  font-size: 2rem;
+  color: white;
+}
+.dragBarDescriptor {
+  color: rgb(243, 241, 241);
+  font-size: 0.95rem;
+}
+
+/* dragbarContent animations */
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+.dragBarText {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+.dragBarText:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.dragBarMain {
+  height: 5px;
+  width: 145px;
+  background-color: rgba(250, 249, 249, 0.699);
+  border-radius: 10px;
+  margin-top: 0.4rem;
+
+}
+
 .ipadBorderInner {
   border: 2px solid black;
   background-image: url('iPad-Air-2020-Stock-Wallpapers-1.jpeg');
@@ -502,6 +573,59 @@ ul li {
 .bold {
   font-weight: 500;
 }
+#aboutMeSection {
+  height: 65px;
+  padding: 0 12.5px 0 12.5px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-top: 1px solid rgb(228, 228, 228);
+  border-bottom: 1px solid rgb(228, 228, 228);
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#aboutMeTextArea > h3 {
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: black;
+}
+#aboutMeTextArea > p {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  color: black;
+}
+#aboutMeSection .fa-angle-right,
+.settingsItem .fa-angle-right {
+  color: rgba(0, 0, 0, 0.301);
+  font-size: 0.75rem;
+}
+.settingIcon {
+  color: rgb(245, 245, 245);
+  background-color: rgb(25, 112, 226);
+  padding: 5px;
+  border-radius: 5px;
+}
+.settingsItem {
+  height: 37.75px;
+  padding: 0 12.5px 0 12.5px;
+  border-top: 1px solid rgb(228, 228, 228);
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.settingsItem span {
+  font-size: 0.85rem;
+  color: black;
+  padding-left: 0.5rem;
+}
+.settingsItem.last {
+  border-bottom: 1px solid rgb(228, 228, 228);
+}
 
 /* Ipad dock area - Bottom display */
 .ipadDockArea {
@@ -533,7 +657,7 @@ ul li {
 footer {
   display: flex;
   justify-content: center;
-  align-items:flex-start;
+  align-items: flex-start;
 }
 footer a {
   color: black;

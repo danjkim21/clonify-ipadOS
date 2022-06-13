@@ -1,203 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-    	<meta charset="utf-8">
-    	<meta name="description" content="This is where your description goes">
-    	<meta name="keywords" content="one, two, three">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="This is where your description goes" />
+    <meta name="keywords" content="one, two, three" />
 
-		<title>iPad Clone</title>
+    <title>iPad Clone</title>
 
-		<!-- external CSS link -->
-		<script src="https://kit.fontawesome.com/a2f02755e4.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" type="text/css" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-		<!-- ipad container section -->
-		<main class="ipadBorderOuter">
-			<section class="ipadBorderInner">
+    <!-- external CSS link -->
+    <script
+      src="https://kit.fontawesome.com/a2f02755e4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ipad container section -->
+    <main class="ipadBorderOuter">
+      <!-- ipad Login display section -->
+      <section class="ipadLoginDisplay outer">
+        <div class="loginDisplayContent">
+          <ul class="dateTimeHead">
+            <i class="fa-solid fa-lock"></i>
+            <h1 class="timeInsert2">9:43</h1>
+            <h4 class="dateInsert2">Sunday, March 6</h4>
+          </ul>
+          <div id="dragBarContainer">
+            <div class="dragBarDescriptor">
+              <span class="dragBarText"
+                >Click to open
+                <div class="dragBarMain"></div
+              ></span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-				<!-- ipad display section and content-->
-				<section class="ipadDisplay">
-					<!-- Status Bar content -->
-					<div class="statusBar">
-						<ul class="statusListLeft">
-							<li class="timeInsert1">9:43 AM</li>
-							<li class="dateInsert1">Sun Mar 6</li>
-						</ul>
-						<ul class="statusListRight">
-							<li><i class="fa-solid fa-wifi"></i></li>
-							<li><i class="fa-solid fa-headphones"></i></li>
-							<li class="batteryLevel">79%</li>
-							<li><i class="fa-solid fa-battery-half"></i></li>
-						</ul>
-					</div>
+      <section class="ipadBorderInner hidden">
+        <!-- ipad display section and content-->
+        <section class="ipadDisplay">
+          <!-- Status Bar content -->
+          <div class="statusBar">
+            <ul class="statusListLeft">
+              <li class="timeInsert1">00:00 AM</li>
+              <li class="dateInsert1">Sun Mar 6</li>
+            </ul>
+            <ul class="statusListRight">
+              <li><i class="fa-solid fa-wifi"></i></li>
+              <li><i class="fa-solid fa-headphones"></i></li>
+              <li class="batteryLevel">79%</li>
+              <li><i class="fa-solid fa-battery-half"></i></li>
+            </ul>
+          </div>
 
-					<!-- ipad Main Display area content -->
-					<div class="ipadContentArea">
+          <!-- ipad Main Display area content -->
+          <div class="ipadContentArea">
+            <!-- Notificaton center (widget space) to the left with widgets -->
+            <div class="notificationCenterArea">
+              <!-- Widget 1 - Date/time -->
+              <div class="widgetSmall widget1 iconHover">
+                <h1 class="timeInsert3">9:43</h1>
+                <h4 class="dateInsert3">Sunday, March 6</h4>
+              </div>
+              <!-- Widget 2 - Weather -->
+              <div class="widgetSmall widget2 iconHover">
+                <a href="https://www.bbc.com/weather/4140963" target="_blank">
+                  <div id="location"><h5>Washington, DC</h5></div>
+                </a>
+                <div><h2 id="temp" class="inline"></h2></div>
+                <a href="https://www.bbc.com/weather/4140963" target="_blank"
+                  ><i id="weather-icon" class="inline wi"></i
+                ></a>
+              </div>
+              <!-- Widget 3 - TBD -->
+              <div class="widgetSmall widget3 iconHover"></div>
+            </div>
 
-						<!-- Notificaton center (widget space) to the left with widgets -->
-						<div class="notificationCenterArea">
-							<!-- Widget 1 - Date/time -->
-							<div class="widgetSmall widget1 iconHover">
-								<h1 class="timeInsert2">9:43</h1>
-								<h4 class="dateInsert2">Sunday, March 6</h4>
-							</div>
-							<!-- Widget 2 - Weather -->
-							<div class="widgetSmall widget2 iconHover">
-								<a href="https://www.bbc.com/weather/4140963" target="_blank">
-									<div id="location"><h5>Washington, DC</h5></div>
-								</a>
-								<div ><h2 id="temp" class="inline"></h2></div>
-								<a href="https://www.bbc.com/weather/4140963" target="_blank"><i id="weather-icon" class="inline wi"></i></a>
-							</div>
-							<!-- Widget 3 - TBD -->
-							<div class="widgetSmall widget3 iconHover"></div>
-						</div>
+            <!-- Space for extra apps and app open areas -->
+            <div class="appArea">
+              <!-- Apps - Click on app dock will open these apps -->
+              <!-- Safari App content -->
+              <div id="safari" class="app hidden">
+                <div id="safariNav">
+                  <div class="dragBar"></div>
+                  <div class="searchBar">https://daniel-jayyoung-</div>
+                </div>
+                <div id="safariBody">
+                  <iframe src="https://daniel-jayyoung-kim.netlify.app/"></iframe>
+                </div>
+              </div>
 
-						<!-- Space for extra apps and app open areas -->
-						<div class="appArea">
+              <!-- Messenger App content -->
+              <div id="messenger" class="app hidden">
+                <div id="messengerNav">
+                  <i class="fa-solid fa-angle-left"></i>
+                  <div class="messageUser">
+                    <img
+                      class="headshot"
+                      src="https://xsgames.co/randomusers/avatar.php?g=male"
+                      alt="headshot"
+                    />
+                    <div class="messageUserName">
+                      <span>Bob Bobberson</span>
+                      <!-- <i class="fa-solid fa-angle-right"> -->
+                    </div>
+                  </div>
+                  <i class="fa-solid fa-video"></i>
+                </div>
+                <div id="messageBody"></div>
+                <div id="textbox">
+                  <i class="fa-solid fa-camera"></i>
+                  <i class="fa-brands fa-app-store"></i>
+                  <input class="messageBox" type="text" value="" placeholder="imessage" />
+                </div>
+              </div>
 
-							<!-- Apps - Click on app dock will open these apps -->
-							<!-- Safari App content -->
-							<div id="safari" class="app hidden">
-								<div id="safariNav">
-									<div class="dragBar"></div>
-									<div class="searchBar">https://daniel-jayyoung-</div>
-								</div>
-								<div id="safariBody">
-									<iframe src="https://daniel-jayyoung-kim.netlify.app/" ></iframe>
-								</div>
-							</div>	
+              <!-- Apple Music App content -->
+              <div id="music" class="app hidden">
+                <div id="backgroundImgBlur"></div>
+                <div id="musicNav">
+                  <div class="dragBar"></div>
+                </div>
+                <div id="albumCoverContainer">
+                  <img
+                    class="albumCoverImg"
+                    src="https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                    alt="song album cover image"
+                  />
+                </div>
+                <div id="songInfoContainer">
+                  <div id="songInfo">
+                    <p class="songTitle">The Dayman</p>
+                    <p class="songAuthor">Charlie Day</p>
+                  </div>
+                  <i id="moreInfoBtn" class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div id="songLength">
+                  <input
+                    type="range"
+                    min="1"
+                    max="100"
+                    value="0"
+                    class="songLengthSlider"
+                  />
+                  <div id="songlengthIndicators">
+                    <span id="currentTime">3:10</span>
+                    <span id="remainingTime">-1:12</span>
+                  </div>
+                </div>
+                <div id="songController">
+                  <i class="fa-solid fa-backward songControllerButtons"></i>
+                  <i class="fa-solid fa-pause songControllerButtons"></i>
+                  <i class="fa-solid fa-forward songControllerButtons"></i>
+                </div>
+                <div id="volumeLength">
+                  <i class="fa-solid fa-volume-off volumeIndicator"></i>
+                  <input
+                    type="range"
+                    min="1"
+                    max="100"
+                    value="50"
+                    id="volSlider"
+                    class="songLengthSlider"
+                  />
+                  <i class="fa-solid fa-volume-high volumeIndicator"></i>
+                </div>
+                <div id="extraBtnsContainer">
+                  <i class="fa-solid fa-share-from-square extraBtn"></i>
+                  <i class="fa-brands fa-slideshare extraBtn"></i>
+                  <i class="fa-solid fa-list extraBtn"></i>
+                </div>
+              </div>
 
-							<!-- Messenger App content -->
-							<div id="messenger" class="app hidden">
-								<div id="messengerNav">
-									<i class="fa-solid fa-angle-left"></i>
-									<div class="messageUser">
-										<img class="headshot" src="https://xsgames.co/randomusers/avatar.php?g=male" alt="headshot">
-										<div class="messageUserName">
-											<span>Daniel Kim</span>
-											<!-- <i class="fa-solid fa-angle-right"> -->
-										</div>
-									</div>
-									<i class="fa-solid fa-video"></i>
-								</div>
-								<div id="messageBody">
-								</div>
-								<div id="textbox">
-									<i class="fa-solid fa-camera"></i>
-									<i class="fa-brands fa-app-store"></i>
-									<input class="messageBox" type="text" value="" placeholder="imessage">
-								</div>
-								
-							</div>	
+              <!-- Mail App content -->
+              <div id="mail" class="app hidden">
+                <div class="mailNav">
+                  <div>
+                    <i class="fa-solid fa-angle-left blueBtn"></i>
+                    <span class="mailNavBtns blueBtn">iCloud</span>
+                  </div>
+                  <span class="mailNavBtns blkBtn">Inbox</span>
+                  <span class="mailNavBtns blueBtn">Edit</span>
+                </div>
 
-							<!-- Apple Music App content -->
-							<div id="music" class="app hidden">
-								<div id="backgroundImgBlur"></div>
-								<div id="musicNav">
-									<div class="dragBar"></div>
-								</div>
-								<div id="albumCoverContainer">
-									<img class="albumCoverImg" src="https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="song album cover image">
-								</div>
-								<div id="songInfoContainer">
-									<div id="songInfo">
-										<p class="songTitle">The Dayman</p>
-										<p class="songAuthor">Charlie Day</p>
-									</div>
-									<i id="moreInfoBtn" class="fa-solid fa-ellipsis"></i>
-								</div>
-								<div id="songLength">
-									<input type="range" min="1" max="100" value="0" class="songLengthSlider">
-									<div id="songlengthIndicators">
-										<span id="currentTime">3:10</span>
-										<span id="remainingTime">-1:12</span>
-									</div>
-								</div>
-								<div id="songController">
-									<i class="fa-solid fa-backward songControllerButtons"></i>
-									<i class="fa-solid fa-pause songControllerButtons"></i>
-									<i class="fa-solid fa-forward songControllerButtons"></i>
-								</div>
-								<div id="volumeLength">
-									<i class="fa-solid fa-volume-off volumeIndicator"></i>
-									<input type="range" min="1" max="100" value="50" id="volSlider" class="songLengthSlider">
-									<i class="fa-solid fa-volume-high volumeIndicator"></i>
-								</div>
-								<div id="extraBtnsContainer">
-									<i class="fa-solid fa-share-from-square extraBtn"></i>
-									<i class="fa-brands fa-slideshare extraBtn"></i>
-									<i class="fa-solid fa-list extraBtn"></i>
-								</div>
-							</div>	
+                <div id="mailBoxContainer"></div>
 
-							<!-- Mail App content -->
-							<div id="mail" class="app hidden">
-								<div class="mailNav">
-									<div>
-										<i class="fa-solid fa-angle-left blueBtn"></i>
-										<span class="mailNavBtns blueBtn">iCloud</span>
-									</div>
-									<span class="mailNavBtns blkBtn">Inbox</span>
-									<span class="mailNavBtns blueBtn">Edit</span>
-								</div>
+                <div class="mailNav bottom">
+                  <i class="fa-solid fa-arrow-up-wide-short blueBtn"></i>
+                  <div id="filterInfoContainer">
+                    <p id="filterInfo">Filtered by:</p>
+                    <p id="filterSelection">Unread</p>
+                  </div>
+                  <i class="fa-solid fa-pen-to-square blueBtn"></i>
+                </div>
+              </div>
 
-								<div id="mailBoxContainer">
+              <!-- Settings App content -->
+              <div id="settings" class="app hidden">
+                <div id="settingsNav">
+                  <span class="mailNavBtns blkBtn bold">Settings</span>
+                </div>
+                <a
+                  href="https://danjkim21.github.io/danielkim-contact-card/"
+                  target="_blank"
+                >
+                  <div id="aboutMeSection">
+                    <img class="headshot" src="img/headshot.jpeg" alt="headshot" />
+                    <div id="aboutMeTextArea">
+                      <h3>Daniel Kim</h3>
+                      <p>Developer Info & Contact</p>
+                    </div>
+                    <i class="fa-solid fa-angle-right"></i>
+                  </div>
+                </a>
+                <div id="settingsSection">
+                  <a href="http://daniel-jkim.com/" target="_blank">
+                    <div class="settingsItem">
+                      <div class="settingsItemLeft">
+                        <i class="fa-solid fa-globe settingIcon"></i>
+                        <span>Portfolio</span>
+                      </div>
+                      <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/danieljayyoungkim/"
+                    target="_blank"
+                  >
+                    <div class="settingsItem">
+                      <div class="settingsItemLeft">
+                        <i class="fa-solid fa-circle-user settingIcon"></i>
+                        <span>LinkedIn</span>
+                      </div>
+                      <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                  </a>
+                  <a href="https://twitter.com/devdanielk" target="_blank">
+                    <div class="settingsItem">
+                      <div class="settingsItemLeft">
+                        <i class="fa-solid fa-comment settingIcon"></i>
+                        <span>Twitter</span>
+                      </div>
+                      <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                  </a>
+                  <a href="https://github.com/danjkim21/clonify-ipadOS" target="_blank">
+                    <div class="settingsItem last">
+                      <div class="settingsItemLeft">
+                        <i class="fa-solid fa-code-compare settingIcon"></i>
+                        <span>GitHub Repo</span>
+                      </div>
+                      <i class="fa-solid fa-angle-right"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-								</div>
-								
-								<div class="mailNav bottom">
-									<i class="fa-solid fa-arrow-up-wide-short blueBtn"></i>
-									<div id="filterInfoContainer">
-										<p id="filterInfo">Filtered by:</p>
-										<p id="filterSelection">Unread</p>
-									</div>
-									<i class="fa-solid fa-pen-to-square blueBtn"></i>
-								</div>
-							</div>
-							
-							<!-- Settings App content -->
-							<div id="settings" class="app hidden">
-								<div id="settingsNav">
-									<span class="mailNavBtns blkBtn bold">Settings</span>
-								</div>
-							</div>	
+          <!-- Dock content -->
+          <div class="ipadDockArea">
+            <div class="dock">
+              <img
+                class="appIcon appHover appSafari"
+                src="img/icon-pack-basic/safari.png"
+                alt=""
+              />
+              <img
+                class="appIcon appHover appMessenger"
+                src="img/icon-pack-basic/facebook-messenger.png"
+                alt=""
+              />
+              <img
+                class="appIcon appHover appMusic"
+                src="img/icon-pack-basic/music-sign.png"
+                alt=""
+              />
+              <img
+                class="appIcon appHover appMail"
+                src="img/icon-pack-basic/gmail.png"
+                alt=""
+              />
+              <img
+                class="appIcon appHover appSettings"
+                src="img/icon-pack-basic/setting-cog.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
 
-						</div>
-					</div>
+    <footer>
+      <span
+        ><a href="https://daniel-jkim.com/"> &copy; 2022 Daniel Jay-Young Kim</a></span
+      >
+      <span class="divider"> | </span>
+      <span> <a href="https://github.com/danjkim21">Github</a></span>
+    </footer>
 
-					<!-- Dock content -->
-					<div class="ipadDockArea">
-						<div class="dock">
-							<img class="appIcon appHover appSafari" src="img/icon-pack-basic/safari.png" alt="">
-							<img class="appIcon appHover appMessenger" src="img/icon-pack-basic/facebook-messenger.png" alt="">
-							<img class="appIcon appHover appMusic" src="img/icon-pack-basic/music-sign.png" alt="">
-							<img class="appIcon appHover appMail" src="img/icon-pack-basic/gmail.png" alt="">
-							<img class="appIcon appHover appSettings" src="img/icon-pack-basic/setting-cog.png" alt="">
-						</div>
+    <!-- Ipad OS cursor test - Credits to Ralph J. Smit! https://ralphjsmit.com/animated-custom-cursor/ -->
+    <div id="cursor" class="cursor">
+      <div class="cursorIcon"></div>
+    </div>
 
-					</div>
-
-				</section>
-			</section>
-		</main>
-
-		<footer>
-			<span><a href="https://daniel-jkim.com/"> &copy; 2022 Daniel Jay-Young Kim</a></span>
-			<span class="divider"> | </span>
-			<span> <a href="https://github.com/danjkim21">Github</a></span>
-		</footer>
-
-		
-		<!-- Ipad OS cursor test - Credits to Ralph J. Smit! https://ralphjsmit.com/animated-custom-cursor/ -->
-		<div id="cursor" class="cursor">
-			<div class="cursorIcon"></div>
-		</div>
-
-		<script type="text/javascript" src="js/main.js"></script>
-	</body>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
 </html>
