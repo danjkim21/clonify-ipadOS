@@ -221,6 +221,11 @@ function closeLogin(evnt) {
 outer.style.maxHeight = outer.scrollHeight + 'px';
 
 // ---- Last.FM Music API Integration ----
+const currentSongImage = document.querySelector('#currentSongImage')
+const songTitleWidget = document.querySelector('#songTitleWidget')
+const songAuthorWidget = document.querySelector('#songAuthorWidget')
+const prevSongBtn = document.querySelector('#prevSongBtn')
+const nextSongBtn = document.querySelector('#nextSongBtn')
 
 async function fetchTopMusic() {
   try {
@@ -232,8 +237,8 @@ async function fetchTopMusic() {
     console.log(tracklist);
 
     
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    console.error(err);
   }
 }
 fetchTopMusic();

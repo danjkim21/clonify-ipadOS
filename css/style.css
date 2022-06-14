@@ -111,7 +111,7 @@ a {
   filter: blur(4px);
 }
 .dragBarText:nth-child(1) {
-  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  animation: fade-in 0.8s 0.25s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 @keyframes fade-in {
   100% {
@@ -247,19 +247,63 @@ ul li {
 }
 
 .widgetSmall.widget3 {
-  background-color: #383838a9;
+  background-color: #4b4c4db9;
   backdrop-filter: blur(10px);
+  display: flex;
+}
+#currentSongContainer {
+  width: 135px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#currentSongImage {
+  width: 110px;
+  height: 110px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 11px 5px rgba(0, 0, 0, 0.226);
+}
+#currentSongInfo {
+  width: 165px;
+  padding: 15px 15px;
+  text-align: center;
+}
+#appOpenBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+#appOpenBtn > i {
+  color: rgba(231, 231, 231, 0.85);
+}
+#songTitleWidget {
+  margin: 5px 0 2.5px 0;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: rgb(247, 247, 247);
+}
+#songAuthorWidget {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(231, 231, 231, 0.85);
+}
+#songControllerWidget {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 16px 0 16px 0;
+}
+.songWidgetButtons {
+  font-size: 1.30rem;
+  color: rgb(247, 247, 247);
 }
 
 /* Ipad App area - Right */
 .appArea {
   width: 60%;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
-  /* border: 1px solid red; */
 }
 
 /* App overlay */
@@ -270,8 +314,6 @@ ul li {
   border-radius: 15px;
   margin-right: 15px;
   box-shadow: 0px 0px 18px 2px rgba(0, 0, 0, 0.29);
-
-  /* border: 1px solid red; */
 }
 /* Safari App */
 #safari {

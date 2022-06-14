@@ -68,6 +68,7 @@
                 <h1 class="timeInsert3">9:43</h1>
                 <h4 class="dateInsert3">Sunday, March 6</h4>
               </div>
+
               <!-- Widget 2 - Weather -->
               <div class="widgetSmall widget2 iconHover">
                 <a href="https://www.bbc.com/weather/4140963" target="_blank">
@@ -78,8 +79,29 @@
                   ><i id="weather-icon" class="inline wi"></i
                 ></a>
               </div>
+
               <!-- Widget 3 - TBD -->
-              <div class="widgetSmall widget3 iconHover"></div>
+              <div class="widgetSmall widget3 iconHover">
+                <div id="currentSongContainer">
+                  <img
+                    src="https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                    alt="album cover art image"
+										id="currentSongImage"
+                  />
+                </div>
+                <div id="currentSongInfo">
+									<div id="appOpenBtn">
+										<i class="fa-solid fa-music"></i>
+									</div>
+                  <h3 id="songTitleWidget">Song Name</h3>
+                  <p id="songAuthorWidget">Artist Name</p>
+                  <div id="songControllerWidget">
+										<i id="prevSongBtn" class="fa-solid fa-backward-step songWidgetButtons"></i>
+                    <i class="fa-solid fa-pause songWidgetButtons"></i>
+										<i id="nextSongBtn"  class="fa-solid fa-forward-step songWidgetButtons"></i>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- Space for extra apps and app open areas -->
@@ -311,8 +333,8 @@
       <div class="cursorIcon"></div>
     </div>
 
-		<!-- Scripts -->
-		<script type='text/javascript' src='js/config.js'></script>
+    <!-- Scripts -->
+    <script type="text/javascript" src="js/config.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
