@@ -111,7 +111,7 @@ a {
   filter: blur(4px);
 }
 .dragBarText:nth-child(1) {
-  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 @keyframes fade-in {
   100% {
@@ -121,10 +121,10 @@ a {
 }
 
 .dragBarMain {
-  height: 5px;
+  height: 4.5px;
   width: 145px;
-  background-color: rgba(250, 249, 249, 0.699);
-  border-radius: 10px;
+  background-color: rgba(250, 249, 249, 0.623);
+  border-radius: 2px;
   margin-top: 0.4rem;
 
 }

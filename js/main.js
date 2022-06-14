@@ -1,3 +1,7 @@
+// ---- Get API Keys from config ----
+const weatherApiKey = config.OPENWEATHER_API_KEY;
+const lastFmApiKey = config.LASTFM_API_KEY;
+
 // ---- Date/time display ----
 // Get current time and format
 function getTime() {
@@ -57,7 +61,7 @@ window.onload = () => {
   // Request to open weather map
   xhr.open(
     'GET',
-    'https://api.openweathermap.org/data/2.5/weather?id=4140963&units=imperial&appid=d2e4d541802b524195b9b8f1544ef756'
+    `https://api.openweathermap.org/data/2.5/weather?id=4140963&units=imperial&appid=${weatherApiKey}`
   );
   xhr.onload = () => {
     if (xhr.readyState === 4) {
@@ -211,7 +215,25 @@ function closeLogin(evnt) {
   next.classList.remove('hidden');
   setTimeout(() => {
     outer.classList.add('hidden');
-  }, 205);
+  }, 200);
 }
 
 outer.style.maxHeight = outer.scrollHeight + 'px';
+
+// ---- Last.FM Music API Integration ----
+
+async function fetchTopMusic() {
+  try {
+    const response = await fetch(
+      `https://ws.audioscrobbler.com//2.0/?method=chart.gettoptracks&api_key=${lastFmApiKey}&limit=10&format=json`
+    );
+    const data = await response.json();
+    const tracklist = data.tracks.track;
+    console.log(tracklist);
+
+    
+  } catch (error) {
+    console.log(error);
+  }
+}
+fetchTopMusic();
