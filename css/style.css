@@ -280,11 +280,21 @@ ul li {
   font-weight: 400;
   font-size: 0.95rem;
   color: rgb(247, 247, 247);
+
+  overflow:hidden; 
+  white-space:nowrap; 
+  text-overflow:ellipsis; 
+  width:130px; 
 }
 #songAuthorWidget {
   margin: 0;
   font-size: 0.8rem;
   color: rgba(231, 231, 231, 0.85);
+
+  overflow:hidden; 
+  white-space:nowrap; 
+  text-overflow:ellipsis; 
+  width:130px; 
 }
 #songControllerWidget {
   display: flex;
@@ -457,6 +467,11 @@ ul li {
   margin: 5px 0 2.5px 0;
   font-weight: 700;
   color: rgb(247, 247, 247);
+  
+  overflow:hidden; 
+  white-space:nowrap; 
+  text-overflow:ellipsis; 
+  width:205px; 
 }
 .songAuthor {
   margin: 0;

@@ -221,12 +221,20 @@ function closeLogin(evnt) {
 outer.style.maxHeight = outer.scrollHeight + 'px';
 
 // ---- Last.FM Music API Integration ----
-const currentSongImage = document.querySelector('#currentSongImage')
-const songTitleWidget = document.querySelector('#songTitleWidget')
-const songAuthorWidget = document.querySelector('#songAuthorWidget')
-const prevSongBtn = document.querySelector('#prevSongBtn')
-const nextSongBtn = document.querySelector('#nextSongBtn')
+// Song WIDGET Selectors
+const currentSongImageWidget = document.querySelector('#currentSongImage');
+const songTitleWidget = document.querySelector('#songTitleWidget');
+const songAuthorWidget = document.querySelector('#songAuthorWidget');
+const prevSongBtnWidget = document.querySelector('#prevSongBtnWidget');
+const nextSongBtnWidget = document.querySelector('#nextSongBtnWidget');
+// Song APP selectors
+const currentSongImageApp = document.querySelector('.albumCoverImg');
+const songTitleApp = document.querySelector('.songTitle');
+const songAuthorApp = document.querySelector('.songAuthor');
+const prevSongBtnApp = document.querySelector('.prevSongBtnApp');
+const nextSongBtnApp = document.querySelector('.nextSongBtnApp');
 
+// Fetch top 10 songs from Last.FM API
 async function fetchTopMusic() {
   try {
     const response = await fetch(
@@ -235,8 +243,35 @@ async function fetchTopMusic() {
     const data = await response.json();
     const tracklist = data.tracks.track;
     console.log(tracklist);
+    console.log(tracklist.length);
 
-    
+    // NEXT Song Trigger 'on click' on nextSongBtnWidget & nextSongBtnApp
+    let songIterator = 0;
+    function nextSong() {
+      songIterator += 1;
+      songIterator = songIterator % tracklist.length;
+      // return tracklist[songIterator];
+      return songIterator;
+    }
+    nextSongBtnWidget.addEventListener('click', displayNextSong);
+    nextSongBtnApp.addEventListener('click', displayNextSong);
+
+    function displayNextSong(e) {
+      let i = nextSong();
+      console.log(i);
+      // Updates Current Song WIDGET information
+      songTitleWidget.innerHTML = tracklist[i].name;
+      songAuthorWidget.innerHTML = tracklist[i].artist.name;
+      currentSongImageWidget.src = tracklist[i].image[3]['#text'];
+      // Updates Current Song APP information
+      songTitleApp.innerHTML = tracklist[i].name;
+      songAuthorApp.innerHTML = tracklist[i].artist.name;
+      currentSongImageApp.src = tracklist[i].image[3]['#text'];
+    }
+
+    // PREVIOUS Song Trigger 'on click' on nextSongBtnWidget & nextSongBtnApp
+    // ** TO DO **
+
   } catch (err) {
     console.error(err);
   }
