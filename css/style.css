@@ -126,7 +126,6 @@ a {
   background-color: rgba(250, 249, 249, 0.623);
   border-radius: 2px;
   margin-top: 0.4rem;
-
 }
 
 .ipadBorderInner {
@@ -281,20 +280,20 @@ ul li {
   font-size: 0.95rem;
   color: rgb(247, 247, 247);
 
-  overflow:hidden; 
-  white-space:nowrap; 
-  text-overflow:ellipsis; 
-  width:130px; 
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 130px;
 }
 #songAuthorWidget {
   margin: 0;
   font-size: 0.8rem;
   color: rgba(231, 231, 231, 0.85);
 
-  overflow:hidden; 
-  white-space:nowrap; 
-  text-overflow:ellipsis; 
-  width:130px; 
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 130px;
 }
 #songControllerWidget {
   display: flex;
@@ -303,7 +302,7 @@ ul li {
   padding: 16px 0 16px 0;
 }
 .songWidgetButtons {
-  font-size: 1.30rem;
+  font-size: 1.3rem;
   color: rgb(247, 247, 247);
 }
 
@@ -390,13 +389,21 @@ ul li {
 #messageBody {
   /* border: 1px solid red; */
   height: 380px;
-  text-align: right;
+  width: 275px;
+  text-align: left;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  overflow-x: hidden;
+  inline-size: 275px;
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 .userTextMsg {
+  font-size: 0.9rem;
   background-color: rgb(0, 122, 255);
   color: white;
   text-align: right;
@@ -467,11 +474,11 @@ ul li {
   margin: 5px 0 2.5px 0;
   font-weight: 700;
   color: rgb(247, 247, 247);
-  
-  overflow:hidden; 
-  white-space:nowrap; 
-  text-overflow:ellipsis; 
-  width:205px; 
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 205px;
 }
 .songAuthor {
   margin: 0;
@@ -593,7 +600,76 @@ ul li {
 #mailBoxContainer {
   height: 400px;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
+.mailItemContainer {
+  height: 60px;
+  width: 275px;
+  padding: 0 8.5px 0 8.5px;
+  border-top: 1px solid rgb(228, 228, 228);
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mailItemTags {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.mailItemTags .unreadMailIcon {
+  font-size: 0.55rem;
+  color: rgb(0, 122, 255);
+  display: block;
+}
+.mailItemTags .replyIcon {
+  font-size: 0.55rem;
+  color: #cccbcb;
+}
+.mailItemDesc {
+  width: 240px;
+}
+.mailTopLine {
+  display: flex;
+  justify-content: space-between;
+}
+.mailSender {
+  font-size: 0.80rem;
+  font-weight: 700;
+  margin: 0;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 155px;
+}
+.mailSentInfo {
+  font-size: 0.75rem;
+  color: #999999;
+}
+.mailHeader {
+  font-size: 0.75rem;
+  margin: 1px 0;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 240px;
+}
+.mailBodyPreview {
+  font-size: 0.75rem;
+  color: #999999;
+  margin: 0;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 240px;
+}
+
 .mailNav.bottom {
   position: absolute;
   bottom: 0;
@@ -680,7 +756,7 @@ ul li {
   color: black;
   padding-left: 0.5rem;
 }
-.settingsItem.last {
+.last {
   border-bottom: 1px solid rgb(228, 228, 228);
 }
 

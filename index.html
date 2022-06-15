@@ -5,13 +5,14 @@
     <meta name="description" content="This is where your description goes" />
     <meta name="keywords" content="one, two, three" />
 
-    <title>iPad Clone</title>
+    <title>Clone-ify: iPadOS</title>
 
     <!-- external CSS link -->
     <script
       src="https://kit.fontawesome.com/a2f02755e4.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="icon" href="img/tablet-screen-button-solid.svg" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -86,19 +87,25 @@
                   <img
                     src="https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
                     alt="album cover art image"
-										id="currentSongImage"
+                    id="currentSongImage"
                   />
                 </div>
                 <div id="currentSongInfo">
-									<div id="appOpenBtn">
-										<i class="fa-solid fa-music"></i>
-									</div>
+                  <div id="appOpenBtn">
+                    <i class="fa-solid fa-music"></i>
+                  </div>
                   <h3 id="songTitleWidget">The Dayman</h3>
                   <p id="songAuthorWidget">Charlie Day</p>
                   <div id="songControllerWidget">
-										<i id="prevSongBtnWidget" class="fa-solid fa-backward-step songWidgetButtons prevSongBtn"></i>
+                    <i
+                      id="prevSongBtnWidget"
+                      class="fa-solid fa-backward-step songWidgetButtons prevSongBtn"
+                    ></i>
                     <i class="fa-solid fa-pause songWidgetButtons"></i>
-										<i id="nextSongBtnWidget"  class="fa-solid fa-forward-step songWidgetButtons"></i>
+                    <i
+                      id="nextSongBtnWidget"
+                      class="fa-solid fa-forward-step songWidgetButtons"
+                    ></i>
                   </div>
                 </div>
               </div>
@@ -177,9 +184,13 @@
                   </div>
                 </div>
                 <div id="songController">
-                  <i class="fa-solid fa-backward-step songControllerButtons prevSongBtnApp"></i>
+                  <i
+                    class="fa-solid fa-backward-step songControllerButtons prevSongBtnApp"
+                  ></i>
                   <i class="fa-solid fa-pause songControllerButtons"></i>
-                  <i class="fa-solid fa-forward-step songControllerButtons nextSongBtnApp"></i>
+                  <i
+                    class="fa-solid fa-forward-step songControllerButtons nextSongBtnApp"
+                  ></i>
                 </div>
                 <div id="volumeLength">
                   <i class="fa-solid fa-volume-off volumeIndicator"></i>
@@ -211,7 +222,106 @@
                   <span class="mailNavBtns blueBtn">Edit</span>
                 </div>
 
-                <div id="mailBoxContainer"></div>
+                <div id="mailBoxContainer">
+                  <div class="mailItemContainer">
+                    <div class="mailItemTags">
+                      <i class="fa-solid fa-circle unreadMailIcon"></i>
+                    </div>
+                    <div class="mailItemDesc">
+                      <div class="mailTopLine">
+                        <span class="mailSender">Daniel Jay-Young Kim</span
+                        ><span class="mailSentInfo"
+                          >Wednesday <i class="fa-solid fa-angle-right"></i
+                        ></span>
+                      </div>
+                      <p class="mailHeader">Hope you're enjoying my project!</p>
+                      <p class="mailBodyPreview">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cum
+                        at voluptatibus expedita aperiam voluptatum velit repellendus quod
+                        doloremque, aut accusamus rem voluptates! Maxime hic, eveniet
+                        porro necessitatibus veniam quas?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mailItemContainer">
+                    <div class="mailItemTags">
+                      <i class="fa-solid fa-circle unreadMailIcon"></i>
+                      <i class="fa-solid fa-reply replyIcon"></i>
+                    </div>
+                    <div class="mailItemDesc">
+                      <div class="mailTopLine">
+                        <span class="mailSender">Dr. Mantas Toboggan</span
+                        ><span class="mailSentInfo"
+                          >Monday <i class="fa-solid fa-angle-right"></i
+                        ></span>
+                      </div>
+                      <p class="mailHeader">Test Results</p>
+                      <p class="mailBodyPreview">
+                        I'm prescribing you Milk Steak and Fight Milk. Optio cum at
+                        voluptatibus expedita aperiam voluptatum velit repellendus quod
+                        doloremque, aut accusamus rem voluptates! Maxime hic, eveniet
+                        porro necessitatibus veniam quas?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mailItemContainer">
+                    <div class="mailItemTags">
+                      <i class="fa-solid fa-circle unreadMailIcon"></i>
+                    </div>
+                    <div class="mailItemDesc">
+                      <div class="mailTopLine">
+                        <span class="mailSender">Fight Milk LLC</span
+                        ><span class="mailSentInfo"
+                          >5/21/2022 <i class="fa-solid fa-angle-right"></i
+                        ></span>
+                      </div>
+                      <p class="mailHeader">Do you want better workout performance?</p>
+                      <p class="mailBodyPreview">
+                        KAKAW KAKAW--FIGHT MILK. expedita aperiam voluptatum velit
+                        repellendus quod doloremque, aut accusamus rem voluptates! Maxime
+                        hic, eveniet porro necessitatibus veniam quas?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mailItemContainer">
+                    <div class="mailItemTags">
+                      <i class="fa-solid fa-circle unreadMailIcon"></i>
+                      <i class="fa-solid fa-reply replyIcon"></i>
+                    </div>
+                    <div class="mailItemDesc">
+                      <div class="mailTopLine">
+                        <span class="mailSender">Waitress</span
+                        ><span class="mailSentInfo"
+                          >5/21/2022 <i class="fa-solid fa-angle-right"></i
+                        ></span>
+                      </div>
+                      <p class="mailHeader">My Name</p>
+                      <p class="mailBodyPreview">
+                        What's my name, what is it? aut accusamus rem voluptates!
+                        Maxime hic, eveniet porro necessitatibus veniam quas?
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mailItemContainer last">
+                    <div class="mailItemTags">
+                      <i class="fa-solid fa-circle unreadMailIcon"></i>
+                      <i class="fa-solid fa-reply replyIcon"></i>
+                    </div>
+                    <div class="mailItemDesc">
+                      <div class="mailTopLine">
+                        <span class="mailSender">Dennis Reynolds</span
+                        ><span class="mailSentInfo"
+                          >5/20/2022 <i class="fa-solid fa-angle-right"></i
+                        ></span>
+                      </div>
+                      <p class="mailHeader">Wally</p>
+                      <p class="mailBodyPreview">
+                        Have you ever been in a storm Wally? aut accusamus rem voluptates!
+                        Maxime hic, eveniet porro necessitatibus veniam quas?
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
                 <div class="mailNav bottom">
                   <i class="fa-solid fa-arrow-up-wide-short blueBtn"></i>
