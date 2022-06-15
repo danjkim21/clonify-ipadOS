@@ -395,7 +395,6 @@ ul li {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  flex-wrap: wrap;
   overflow-y: auto;
   overflow-x: hidden;
   inline-size: 275px;
@@ -408,7 +407,7 @@ ul li {
   color: white;
   text-align: right;
   min-height: 25px;
-  min-width: 60px;
+  min-width:30px;
   /* float: right; */
   padding: 5px 10px 5px 10px;
   margin: 8px 0 6px 0;
