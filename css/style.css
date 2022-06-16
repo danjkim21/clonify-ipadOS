@@ -8,7 +8,11 @@
   font-family: 'helvetica neue', sans-serif;
 }
 body {
-  background-color: #fbfbfd;
+  background-color: #000000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -45,9 +49,12 @@ a {
 
 /* Ipad Borders */
 .ipadBorderOuter {
-  border: 3px solid silver;
+  border: 3px solid rgb(172, 172, 175);
   background: black;
-  box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.52);
+  -webkit-box-shadow: -10px -5px 60px 0px #31b48b5e, -10px 5px 60px 0px #88b34f63,
+    10px 5px 60px 0px #09b9c563, 10px -5px 60px 0px #1a0dd462;
+  box-shadow: -10px -5px 60px 0px #31b48b5e, -10px 5px 60px 0px #88b34f63,
+    10px 5px 60px 0px #09b9c563, 10px -5px 60px 0px #1a0dd462;
   border-radius: 35px;
   height: 720px;
   width: 1080px;
@@ -407,7 +414,7 @@ ul li {
   color: white;
   text-align: right;
   min-height: 25px;
-  min-width:30px;
+  min-width: 30px;
   /* float: right; */
   padding: 5px 10px 5px 10px;
   margin: 8px 0 6px 0;
@@ -636,7 +643,7 @@ ul li {
   justify-content: space-between;
 }
 .mailSender {
-  font-size: 0.80rem;
+  font-size: 0.8rem;
   font-weight: 700;
   margin: 0;
 
@@ -749,6 +756,14 @@ ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.settingsItem.footer {
+  height: 45px;
+  margin-top: 165px;
+  border-radius: 0 0 15px 15px;
+  background-color: rgb(245, 245, 245);
+  justify-content: center;
+  text-align: center;
 }
 .settingsItem span {
   font-size: 0.85rem;
